@@ -9,37 +9,23 @@
 
 <body>
 
-    <section id="aluno">
-        Nome:<input id="nome"><br>
-        Idade:<input id="idade" type="number"><br>
-        Matrícula:<input id="matricula"><br>
+    Nome:<input id="nome"><br>
+    Idade:<input id="idade" type="number"><br>
+    Matrícula:<input id="matricula"><br>
 
-        <button onclick="controladorAluno.inserir()">Cadastrar Aluno</button>
-        <button onclick="controladorAluno.listarAlunosMenoresIdade()">Mostrar Menores</button>
+    <button onclick="controladorAluno.inserir()">Cadastrar Aluno</button>
+    <button onclick="controladorAluno.listarAlunosMenoresIdade()">Mostrar Menores</button>
 
-        <ol id="listaAlunos">
-        </ol>
+    <ol id="listaAlunos">
+    </ol>
 
-        <ul id="listaAlunosMenores">
-        </ul>
-    </section>
-    
-    <section id="disciplina">
-        Código:<input id="codigoDisciplina"><br>
-        Nome:<input id="nomeDisciplina"><br>
-
-
-    </section>
+    <ul id="listaAlunosMenores">
+    </ul>
 
     <script src="modelo/aluno.js"></script>
     <script src="repositorio/aluno_repositorio.js"></script>
     <script src="servico/aluno_service.js"></script>
     <script src="controlador/aluno_controlador.js"></script>
-
-    <script src="modelo/disciplina.js"></script>
-    <script src="repositorio/disciplina_repositorio.js"></script>
-    <script src="servico/disciplina_service.js"></script>
-    <script src="controlador/disciplina_controlador.js"></script>
 
     <script src="script.js"></script>
 
