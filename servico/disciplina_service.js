@@ -22,8 +22,4 @@ class DisciplinaService {
         this.repositorio.remover(codigo);
     }
 
-    inserirAlunoNaDisciplina(aluno, disciplina) {
-        this.repositorio.inserirAlunoNaDisciplina(aluno, disciplina);
-    }
-
 }
