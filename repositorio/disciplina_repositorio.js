@@ -24,4 +24,14 @@ class DisciplinaRepositorio {
         return this.disciplinas;
     }
 
+    perquisarPorCodigo(codigo) {
+        return this.listar().filter(
+            disciplina => disciplina.codigo === codigo);
+    }
+
+    inserirAlunoNaDisciplina(aluno, disciplina) {
+        const disciplinaParaInserir = this.perquisarPorCodigo(disciplina.codigo);
+        disciplinaParaInserir.adicionarAluno(aluno);
+    }
+
 }
