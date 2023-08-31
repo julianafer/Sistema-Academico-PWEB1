@@ -24,4 +24,11 @@ class DisciplinaRepositorio {
         return this.disciplinas;
     }
 
+    inserirAlunoNaDisciplina(aluno, disciplina) {
+        const DisciplinaAInserir = this.disciplinas.find(d => d.codigo === disciplina.codigo);
+        if (DisciplinaAInserir) {
+            disciplina.adicionarAluno(aluno)
+        }
+    }
+
 }

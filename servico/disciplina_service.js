@@ -24,13 +24,7 @@ class DisciplinaService {
     }
 
     inserirAlunoNaDisciplina(aluno, disciplina) {
-        const disciplinaParaInserir = this.perquisarPorCodigo(disciplina.codigo);
-        if (disciplinaParaInserir) {
-            disciplinaParaInserir.alunos().push(aluno);
-        }
-        else {
-            throw new Error('Disciplina inexistente!');
-        }
+        this.repositorio.inserirAlunoNaDisciplina(aluno, disciplina);
     }
 
 }

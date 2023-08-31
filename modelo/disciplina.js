@@ -30,4 +30,8 @@ class Disciplina {
         this._alunos = listaAlunos;
     }
 
+    adicionarAluno(aluno) {
+        this._alunos.push(aluno);
+    }
+
 }
