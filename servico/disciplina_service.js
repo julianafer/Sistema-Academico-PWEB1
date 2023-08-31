@@ -15,11 +15,22 @@ class DisciplinaService {
     }
 
     perquisarPorCodigo(codigo) {
-        this.repositorio.perquisarPorCodigo(codigo);
+        return this.repositorio.listar().filter(
+            disciplina => disciplina.codigo === codigo);
     }
 
     remover(codigo) {
         this.repositorio.remover(codigo);
+    }
+
+    inserirAlunoNaDisciplina(aluno, disciplina) {
+        const disciplinaParaInserir = this.perquisarPorCodigo(disciplina.codigo);
+        if (disciplinaParaInserir) {
+            disciplinaParaInserir.alunos().push(aluno);
+        }
+        else {
+            throw new Error('Disciplina inexistente!');
+        }
     }
 
 }
